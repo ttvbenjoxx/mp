@@ -1,8 +1,8 @@
 // Utility to parse query string
 function getQueryParams() {
-  const params = new URLSearchParams(window.location.search);
-  const apiKey = params.get('key');
-  const wish = params.get('wish');
+  const urlParams = new URLSearchParams(window.location.search);
+  const apiKey = urlParams.get('key');
+  const wish = urlParams.get('wish');
   return { apiKey, wish };
 }
 
@@ -45,7 +45,7 @@ async function processWish(apiKey, wish) {
       <p><strong>Monkey's Paw:</strong> ${reply}</p>
     `;
   } catch (error) {
-    document.body.innerHTML = `<h1>Error:</h1><p>${error.message}</p>`;
+    document.body.innerHTML += `<h1>Error:</h1><p>${error.message}</p>`;
   }
 }
 
