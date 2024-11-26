@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monkey's Paw</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <h1>Monkey's Paw API</h1>
+    <div id="key-input">
+      <input type="password" id="api-key" placeholder="Enter your OpenAI API Key">
+      <button id="save-key">Save Key</button>
+    </div>
+    <div id="chat-container" hidden>
+      <div id="chat-output"></div>
+      <input type="text" id="user-input" placeholder="Your wish...">
+      <button id="send-wish">Send</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
